@@ -10,7 +10,13 @@
 
   </div>
  <h3 style="color:light-blue;margin-top:200px" v-if="highestResult && (time != null)">Best time taken : <span style="color:#f44139">{{highestResult}} ms</span></h3> 
+     <div class="button"> 
+       <button >0-260 ms :{{Great}}</button>
+       <button >260-350 ms :{{Good}}</button>
+       <button>350-400 ms :{{Average}}</button>
+       <button>399+ ms :{{Bad}}</button>
 
+       </div>
   </div>
 </template>
 
@@ -29,6 +35,13 @@ export default {
       time:null,
       vari:"play",
       highestResult:null,
+      
+     Great:"Great",
+     Good:"Good",
+     Average:"Average",
+     Bad:"Bad",
+
+
     };
   },
   methods: {
@@ -79,7 +92,7 @@ export default {
 button{
   color: #61757e;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 5px 10px;
   background: #e9e8e8;
   border: 0px;
   cursor: pointer;
@@ -89,6 +102,13 @@ button{
 button:hover{
   background: #a2d2ff;
   color: #14213d;
+}
+.button button{
+  padding: 10px 20px;
+  background: rgb(233, 229, 229);
+  color:orangered;
+  margin: 10px;
+  font-size: 13px;
 }
 
 </style>

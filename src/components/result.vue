@@ -1,6 +1,6 @@
 <template>
 <br><br>
-    <h3 style="color:light-blue">Current time taken : {{p_time}} ms <br> {{result}} </h3>
+    <h3 style="color:light-blue">Current time taken : {{p_time}} ms <br> <span id="result">{{result}}</span> </h3>
     
 </template>
 
@@ -15,15 +15,15 @@ export default {
     },
     mounted() {
             
-                if(this.p_time < 260){
-                    this.result = 'great'
+                if(this.p_time <=260){
+                    this.result = 'Great'
                 }
-                else if( this.p_time < 350){
-                    this.result = 'good'
-                } else if( this.p_time < 400){
-                    this.result = 'average'
+                else if( this.p_time <= 350){
+                    this.result = 'Good'
+                } else if( this.p_time <= 400){
+                    this.result = 'Average'
                 }else
-                   this.result = 'bad'
+                   this.result = 'Bad'
                    
                   
             },
@@ -34,7 +34,13 @@ export default {
 }
 </script>
 <style >
-
+#result{
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 33px;
+    display: block;
+}
 
     
 </style>
