@@ -2,7 +2,16 @@
 <div>
   <div class="main">
    <h1 style="color:orangered"> Reaction Game </h1>
+   <div class="button"> 
+       <button >0-260 ms :{{Great}}</button>
+       <button >260-350 ms :{{Good}}</button>
+       <button>350-400 ms :{{Average}}</button>
+       <button>399+ ms :{{Bad}}</button>
+     
+    <br>    <br>
 
+       </div>
+<p style="font-weight:bold">Touch the following block as quick as possible</p>
     <button @click="play"  :disabled="isPlaying" >{{vari}}</button>
 
     <Block  :p_delay="delay" v-if="isPlaying"  @ended="endGame"  /> <!-- here p_delay is the props and by defining :p_delay we now can dynamically change the attribute value wich is stored in delay -->
@@ -10,13 +19,7 @@
 
   </div>
  <h3 style="color:light-blue;margin-top:200px" v-if="highestResult && (time != null)">Best time taken : <span style="color:#f44139">{{highestResult}} ms</span></h3> 
-     <div class="button"> 
-       <button >0-260 ms :{{Great}}</button>
-       <button >260-350 ms :{{Good}}</button>
-       <button>350-400 ms :{{Average}}</button>
-       <button>399+ ms :{{Bad}}</button>
-
-       </div>
+     
   </div>
 </template>
 
